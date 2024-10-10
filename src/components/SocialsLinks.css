@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.social {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.social ul li {
+    list-style: none;
+}
+
+.social ul li a{
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    margin-left: -120px;
+    transition: margin-left 500ms;
+    border-radius: 16px;
+}
+
+.social ul li a:hover {
+    margin-left: 0;
+}
+
+.social ul li a .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    font-size: 28px;
+}
+
+.facebook {
+    background: #4267B2;
+}
+
+.instagram {
+    background: #833ab4;
+    background: linear-gradient(
+      to right,
+      #833ab4,#fd1d1d,#fcb045);
+}
+
+.youtube {
+    background: #FF0000;
+}
+
+.twitter {
+    background: #1DA1F2;
+}

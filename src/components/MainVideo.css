@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mainMovie {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;    
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.appBarStatic {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: height .3s ease-in-out, background-color .3s ease-in-out;
+    background-color: brown;
+}
+
+.appBarFloat {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 4.5rem;
+    top: 0;
+    transition: height .3s ease-in-out, background-color .3s ease-in-out;
+    background: transparent;
+    background: rgba(94, 94, 94, 0.336);
+    backdrop-filter: blur(20px);
+}
