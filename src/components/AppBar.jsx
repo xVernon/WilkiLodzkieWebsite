@@ -14,8 +14,17 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import "./MainVideo.css";
 import wilkiLogo from "../images/wilkiLogo.png"
+import {NavLink} from "react-router-dom";
 
-const pages = ['SEASON', 'ROSTER', 'NEWS', 'INFO', 'TICKETS', 'SHOP', 'OFFICIAL WEBSITE LEAGUE'];
+const pages = [
+  {text:'SEASON', path:'/season'}, 
+  {text:'ROSTER', path:'/roster'},
+  {text:'NEWS', path:'/news'},
+  {text:'INFO', path:'/info'},
+  {text:'TICKETS', path:'/tickets'},
+  {text:'SHOP', path:'/shop'},
+  {text:'OFFICIAL WEBSITE LEAGUE', path:'https://polskafutbolliga.pl/'},
+]
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -43,7 +52,9 @@ function ResponsiveAppBar() {
     <AppBar position='static'>
       <Container className={state ? "appBarFloat" : "appBarStatic"} maxWidth="100%">
         <Toolbar disableGutters>
-          <img id="logoTeam" src={wilkiLogo} width={150}/>
+          <NavLink to="/">
+            <img id="logoTeam" src={wilkiLogo} width={150}/>
+            </NavLink>
           
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -74,8 +85,8 @@ function ResponsiveAppBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                <MenuItem key={page.text} onClick={handleCloseNavMenu}>
+                  <Typography sx={{ textAlign: 'center' }}>{page.text}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -99,13 +110,17 @@ function ResponsiveAppBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
+             
+                
+                <NavLink to={page.path}>
+                   <Button
+                key={page.text}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
+              >{page.text} 
               </Button>
+              </NavLink>
+             
             ))}
           </Box>
         </Toolbar>

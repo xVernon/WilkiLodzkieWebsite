@@ -12,6 +12,7 @@ import Footer from './Footer';
 import BasicTable from "./BasicTable";
 import { Container } from "@mui/material";
 
+
 const Home = () => {
   return (
     <>
@@ -24,7 +25,7 @@ const Home = () => {
           <BasicTable />
         </Container>
         <Divider className="sectionDivider" style={{paddingTop:40, paddingBottom:40, fontSize:24}}>NEWS</Divider>
-        <DividerStack  />
+        <DividerStack  style={{paddingBottom:40}}/>
         <Footer />
       </SimpleContainer>
       <SocialsLinks />
